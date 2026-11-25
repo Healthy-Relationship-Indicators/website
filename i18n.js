@@ -109,7 +109,7 @@ const I18N = {
     "priv.1": "<strong>Anonimowo.</strong> Nie potrzeba konta ani imienia. Usuń imiona, nazwy użytkowników, numery telefonów, adresy, miejsca pracy i wszystko, co mogłoby kogoś zidentyfikować — także drugą osobę.",
     "priv.2": "<strong>Cel.</strong> Zgłoszenia służą wyłącznie do badań, trenowania i oceny modeli wykrywających zdrowe i niezdrowe wzorce komunikacji.",
     "priv.3": "<strong>Otwarty zbiór danych.</strong> Po weryfikacji i dodatkowej anonimizacji zgłoszenia mogą zostać opublikowane jako część otwartego zbioru danych badawczych.",
-    "priv.4": "<strong>Przechowywanie.</strong> Formularz jest obsługiwany przez " + FORMSPREE_LINK + ". Ta strona nie używa śledzenia ani analityki.",
+    "priv.4": "<strong>Przechowywanie.</strong> Formularz jest obsługiwany przez " + FORMSPREE_LINK + ". Anonimowe statystyki odwiedzin zlicza <a href=\"https://www.goatcounter.com/help/privacy\" rel=\"noopener\">GoatCounter</a> — bez plików cookie i bez danych osobowych.",
     "priv.5": "<strong>Usunięcie.</strong> Jeśli chcesz usunąć coś, co udostępniono, utwórz zgłoszenie (issue) na naszym GitHubie z krótkim cytatem, abyśmy mogli to odnaleźć.",
     "priv.6": "<strong>To nie porada.</strong> Ten projekt to badania, a nie terapia ani porada prawna. Jeśli nie czujesz się bezpiecznie w relacji, skontaktuj się z numerem alarmowym 112 lub telefonem dla osób doznających przemocy w rodzinie.",
 
@@ -218,7 +218,7 @@ const I18N = {
     "priv.1": "<strong>Anónimo.</strong> No se necesita cuenta ni nombre. Elimina nombres, usuarios, teléfonos, direcciones, lugares de trabajo y cualquier dato que pueda identificar a alguien, incluida la otra persona.",
     "priv.2": "<strong>Finalidad.</strong> Los envíos se usan solo para investigar, entrenar y evaluar modelos que detectan patrones de comunicación sanos y no sanos.",
     "priv.3": "<strong>Conjunto de datos abierto.</strong> Tras revisarlos y anonimizarlos aún más, los envíos pueden publicarse como parte de un conjunto de datos de investigación abierto.",
-    "priv.4": "<strong>Almacenamiento.</strong> El formulario lo procesa " + FORMSPREE_LINK + ". Este sitio no usa rastreo ni analítica.",
+    "priv.4": "<strong>Almacenamiento.</strong> El formulario lo procesa " + FORMSPREE_LINK + ". Las estadísticas anónimas de visitas se cuentan con <a href=\"https://www.goatcounter.com/help/privacy\" rel=\"noopener\">GoatCounter</a>, sin cookies ni datos personales.",
     "priv.5": "<strong>Eliminación.</strong> Si quieres que se elimine algo que enviaste, abre una incidencia (issue) en nuestro GitHub con una cita breve para poder encontrarlo.",
     "priv.6": "<strong>No es asesoramiento.</strong> Este proyecto es investigación, no terapia ni asesoramiento legal. Si no te sientes seguro/a en una relación, contacta con los servicios de emergencia (112) o con una línea de ayuda contra la violencia de género.",
 

@@ -72,6 +72,15 @@ const table = document.getElementById("indicator-table");
 const countEl = document.getElementById("assign-count");
 const langField = document.getElementById("language-field");
 
+// ---- analytics (GoatCounter events; no-op if blocked) ----
+function track(name) {
+  try {
+    if (window.goatcounter && window.goatcounter.count) {
+      window.goatcounter.count({ path: name, title: name, event: true });
+    }
+  } catch (_) {}
+}
+
 // ---- i18n ----
 // Capture the English text from the page once, so switching back to EN works.
 const EN = { ...EN_JS };
@@ -122,7 +131,10 @@ function setLanguage(next) {
 }
 
 document.querySelectorAll(".lang-switch button").forEach((b) =>
-  b.addEventListener("click", () => setLanguage(b.dataset.lang)));
+  b.addEventListener("click", () => {
+    setLanguage(b.dataset.lang);
+    track("lang-" + b.dataset.lang);
+  }));
 
 // ---- indicators ----
 function el(tag, attrs = {}, text) {
@@ -169,6 +181,14 @@ function updateCount() {
   countEl.textContent = n ? t("form.selected").replace("{n}", n) : "";
 }
 picker.addEventListener("change", updateCount);
+
+// Interest signals: how far people get into contributing.
+document.getElementById("assign").addEventListener("toggle", (e) => {
+  if (e.target.open) track("assign-opened");
+});
+form.conversation.addEventListener("input", () => track("form-started"), { once: true });
+document.querySelectorAll('a[href="#share"]').forEach((a) =>
+  a.addEventListener("click", () => track("cta-share")));
 
 // ---- form ----
 function setStatus(key, kind) {
@@ -217,8 +237,10 @@ form.addEventListener("submit", async (e) => {
     langField.value = lang;
     updateCount();
     setStatus("status.ok", "ok");
+    track("form-submitted");
   } catch (err) {
     setStatus("status.err", "err");
+    track("form-error");
   } finally {
     button.disabled = false;
   }
