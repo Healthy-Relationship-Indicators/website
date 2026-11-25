@@ -1,6 +1,6 @@
 // Set this to your Formspree form ID (the part after https://formspree.io/f/).
 // Create one at https://formspree.io → New form.
-const FORMSPREE_ID = "YOUR_FORM_ID";
+const FORMSPREE_ID = "xyewodaw";
 
 const form = document.getElementById("share-form");
 const statusEl = document.getElementById("form-status");
