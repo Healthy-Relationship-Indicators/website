@@ -16,6 +16,7 @@
     <a class="brand" href="#">AI Dating Intelligence</a>
     <nav>
       <a href="#model">The model</a>
+      <a href="#indicators">Indicators</a>
       <a href="#features">Features</a>
       <a href="#research">Research</a>
       <a href="#vision">Vision</a>
@@ -64,6 +65,12 @@
             <label><input type="radio" name="feeling" value="unsure" checked> ⚪ Not sure</label>
           </fieldset>
 
+          <details class="assign" id="assign">
+            <summary>Assign indicators <span>(optional)</span> <b id="assign-count"></b></summary>
+            <p class="assign-hint">Tick any behaviors you notice in this conversation.</p>
+            <div id="indicator-picker"></div>
+          </details>
+
           <label class="sr-only" for="context">Context (optional)</label>
           <input id="context" name="context" type="text" maxlength="1000"
             placeholder="Optional: context, e.g. 'first week of chatting on an app'">
@@ -99,6 +106,25 @@
         <li><span>4</span><div><h3>Evaluate &amp; explain</h3><p>Measure accuracy and bias, and make every prediction point to the evidence behind it.</p></div></li>
       </ol>
       <a class="button" href="#share">Share a conversation</a>
+    </section>
+
+    <section class="section" id="indicators">
+      <h2>Indicators</h2>
+      <p>
+        These are the labels the model learns to recognize. When you share a conversation
+        you can assign any of them — it helps turn raw text into training data.
+      </p>
+      <div class="legend">
+        <span class="lbl green">Green flag</span> healthy behavior
+        <span class="lbl potential">Potential red flag</span> worth a closer look; depends on context
+        <span class="lbl red">Red flag</span> unhealthy or harmful behavior
+      </div>
+      <div class="table-wrap">
+        <table class="ind-table">
+          <thead><tr><th>Example trait</th><th>Label</th><th>What it can look like</th></tr></thead>
+          <tbody id="indicator-table"></tbody>
+        </table>
+      </div>
     </section>
 
     <section class="section" id="about">

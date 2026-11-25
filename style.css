@@ -136,3 +136,38 @@ h1, h2, h3 { line-height: 1.15; margin: 0 0 0.6em; }
 .steps h3 { font-size: 1.05rem; margin: 0.15rem 0 0.25rem; }
 .steps p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 .steps em { color: #fbcfe8; font-style: normal; font-weight: 600; }
+
+/* indicator labels */
+.lbl { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; white-space: nowrap; }
+.lbl.green { background: rgba(34, 197, 94, 0.18); color: #4ade80; }
+.lbl.potential { background: rgba(234, 179, 8, 0.18); color: #facc15; }
+.lbl.red { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+
+/* assign indicators in the card */
+.assign { background: #f3f0fa; border-radius: 16px; padding: 0.7rem 0.9rem; }
+.assign summary { cursor: pointer; font-weight: 700; font-size: 0.92rem; }
+.assign summary span { font-weight: 400; color: #6b6385; }
+.assign summary b { float: right; color: #be185d; font-size: 0.82rem; }
+.assign-hint { margin: 0.5rem 0; font-size: 0.82rem; color: #6b6385; }
+#indicator-picker { max-height: 280px; overflow-y: auto; display: grid; gap: 0.6rem; }
+.ind-group { border: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.ind-group legend { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; padding: 0; margin-bottom: 0.3rem; }
+.ind-group.green legend { color: #15803d; }
+.ind-group.potential legend { color: #a16207; }
+.ind-group.red legend { color: #b91c1c; }
+.ind-chip { cursor: pointer; font-size: 0.82rem; padding: 0.3rem 0.65rem; border-radius: 999px; background: #fff; border: 2px solid #e4def2; user-select: none; }
+.ind-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.ind-chip:has(input:focus-visible) { outline: 2px solid var(--pink); }
+.ind-group.green .ind-chip:has(input:checked) { border-color: #22c55e; background: #f0fdf4; }
+.ind-group.potential .ind-chip:has(input:checked) { border-color: #eab308; background: #fefce8; }
+.ind-group.red .ind-chip:has(input:checked) { border-color: #ef4444; background: #fef2f2; }
+
+/* indicator table */
+.legend { display: flex; flex-wrap: wrap; gap: 0.4rem 0.8rem; align-items: center; color: var(--muted); font-size: 0.9rem; margin: 1rem 0; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; }
+.ind-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.ind-table th, .ind-table td { text-align: left; padding: 0.7rem 1rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.ind-table th { background: var(--bg-2); color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.ind-table td:first-child { font-weight: 600; white-space: nowrap; }
+.ind-table td:last-child { color: var(--muted); }
+.ind-table tr:last-child td { border-bottom: none; }
