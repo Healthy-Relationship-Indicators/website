@@ -126,3 +126,13 @@ h1, h2, h3 { line-height: 1.15; margin: 0 0 0.6em; }
 .plain li { margin-bottom: 0.7rem; }
 .plain strong { color: var(--text); }
 .footer { text-align: center; padding: 2.5rem 1rem; color: var(--muted); border-top: 1px solid var(--line); font-size: 0.9rem; }
+
+/* model roadmap */
+.steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 0.8rem; }
+.steps li { display: flex; gap: 1rem; align-items: flex-start; background: var(--bg-2); border: 1px solid var(--line); border-radius: 18px; padding: 1rem 1.2rem; }
+.steps li > span { flex: none; width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center; font-weight: 800; background: rgba(255,255,255,0.08); }
+.steps li.active { border-color: rgba(236, 72, 153, 0.6); }
+.steps li.active > span { background: var(--grad); }
+.steps h3 { font-size: 1.05rem; margin: 0.15rem 0 0.25rem; }
+.steps p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+.steps em { color: #fbcfe8; font-style: normal; font-weight: 600; }
