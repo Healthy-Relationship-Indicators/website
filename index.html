@@ -3,10 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Dating Intelligence — Healthy Relationship Indicators</title>
-  <meta name="description" content="Building AI for healthier human connections. Help us build an open dataset of dating conversations — share one anonymously.">
+  <title data-i18n="meta.title">AI Dating Intelligence — Healthy Relationship Indicators</title>
+  <meta name="description" data-i18n-content="meta.description" content="Building AI for healthier human connections. Help us build an open dataset of dating conversations — share one anonymously.">
   <meta property="og:title" content="AI Dating Intelligence">
   <meta property="og:description" content="Share a dating conversation anonymously and help build AI for healthier relationships.">
+  <link rel="alternate" hreflang="en" href="https://healthy-relationship-indicators.github.io/website/?lang=en">
+  <link rel="alternate" hreflang="pl" href="https://healthy-relationship-indicators.github.io/website/?lang=pl">
+  <link rel="alternate" hreflang="es" href="https://healthy-relationship-indicators.github.io/website/?lang=es">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,12 +18,17 @@
   <header class="nav">
     <a class="brand" href="#">AI Dating Intelligence</a>
     <nav>
-      <a href="#model">The model</a>
-      <a href="#indicators">Indicators</a>
-      <a href="#features">Features</a>
-      <a href="#research">Research</a>
-      <a href="#vision">Vision</a>
-      <a class="nav-cta" href="#share">Share data</a>
+      <a href="#model" data-i18n="nav.model">The model</a>
+      <a href="#indicators" data-i18n="nav.indicators">Indicators</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#research" data-i18n="nav.research">Research</a>
+      <a href="#vision" data-i18n="nav.vision">Vision</a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" title="English">EN</button>
+        <button type="button" data-lang="pl" title="Polski">PL</button>
+        <button type="button" data-lang="es" title="Español">ES</button>
+      </div>
+      <a class="nav-cta" href="#share" data-i18n="nav.share">Share data</a>
     </nav>
   </header>
 
@@ -28,14 +36,14 @@
     <!-- Hero + ngl-style submission card -->
     <section class="hero" id="share">
       <div class="hero-copy">
-        <p class="eyebrow">Open-source initiative · Healthy Relationship Indicators</p>
-        <h1>Building AI for healthier human connections.</h1>
-        <p class="lead">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Open-source initiative · Healthy Relationship Indicators</p>
+        <h1 data-i18n="hero.title">Building AI for healthier human connections.</h1>
+        <p class="lead" data-i18n="hero.lead">
           AI Dating Intelligence helps people understand dating dynamics,
           communication patterns and relationship behaviors — by spotting
           green and red flags in conversations, with clear explanations.
         </p>
-        <div class="notice">
+        <div class="notice" data-i18n="hero.notice">
           <strong>I'm building a machine learning model that catches red and green flags.</strong>
           Right now I'm collecting the dataset to train and evaluate it — and I need real examples.
           If you have a dating conversation — healthy, awkward or worrying —
@@ -49,92 +57,95 @@
             <div class="avatar" aria-hidden="true">💬</div>
             <div>
               <p class="card-handle">@healthy-relationship-indicators</p>
-              <p class="card-title">share a dating conversation anonymously!</p>
+              <p class="card-title" data-i18n="form.title">share a dating conversation anonymously!</p>
             </div>
           </div>
 
-          <label class="sr-only" for="conversation">Conversation</label>
+          <label class="sr-only" for="conversation" data-i18n="form.conversation">Conversation</label>
           <textarea id="conversation" name="conversation" rows="8" maxlength="20000" required
+            data-i18n-ph="form.placeholder"
             placeholder="Paste the conversation here…&#10;&#10;A: hey, how was your day?&#10;B: good! you?&#10;…"></textarea>
 
           <fieldset class="chips">
-            <legend>How did it feel to you?</legend>
-            <label><input type="radio" name="feeling" value="green"> 🟢 Healthy</label>
-            <label><input type="radio" name="feeling" value="red"> 🔴 Worrying</label>
-            <label><input type="radio" name="feeling" value="mixed"> 🟡 Mixed</label>
-            <label><input type="radio" name="feeling" value="unsure" checked> ⚪ Not sure</label>
+            <legend data-i18n="form.feeling">How did it feel to you?</legend>
+            <label><input type="radio" name="feeling" value="green"> 🟢 <span data-i18n="form.feel.green">Healthy</span></label>
+            <label><input type="radio" name="feeling" value="red"> 🔴 <span data-i18n="form.feel.red">Worrying</span></label>
+            <label><input type="radio" name="feeling" value="mixed"> 🟡 <span data-i18n="form.feel.mixed">Mixed</span></label>
+            <label><input type="radio" name="feeling" value="unsure" checked> ⚪ <span data-i18n="form.feel.unsure">Not sure</span></label>
           </fieldset>
 
           <details class="assign" id="assign">
-            <summary>Assign indicators <span>(optional)</span> <b id="assign-count"></b></summary>
-            <p class="assign-hint">Tick any behaviors you notice in this conversation.</p>
+            <summary><span class="assign-title" data-i18n="form.assign">Assign indicators</span> <span data-i18n="form.optional">(optional)</span> <b id="assign-count"></b></summary>
+            <p class="assign-hint" data-i18n="form.assignHint">Tick any behaviors you notice in this conversation.</p>
             <div id="indicator-picker"></div>
           </details>
 
-          <label class="sr-only" for="context">Context (optional)</label>
+          <label class="sr-only" for="context" data-i18n="form.contextLabel">Context (optional)</label>
           <input id="context" name="context" type="text" maxlength="1000"
+            data-i18n-ph="form.contextPh"
             placeholder="Optional: context, e.g. 'first week of chatting on an app'">
 
           <label class="consent">
             <input type="checkbox" name="consent" value="yes" required>
-            <span>I removed names, phone numbers, addresses and other identifying details,
+            <span data-i18n="form.consent">I removed names, phone numbers, addresses and other identifying details,
             and I agree this text may be used for research and an open dataset.
             <a href="#privacy">Privacy</a></span>
           </label>
 
+          <input type="hidden" name="language" id="language-field" value="en">
           <!-- honeypot against bots -->
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
 
-          <button type="submit" class="send">Send!</button>
+          <button type="submit" class="send" data-i18n="form.send">Send!</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="anon">🔒 anonymous · no account needed</p>
+          <p class="anon" data-i18n="form.anon">🔒 anonymous · no account needed</p>
         </form>
       </div>
     </section>
 
     <section class="section" id="model">
-      <h2>What I'm building now</h2>
-      <p>
+      <h2 data-i18n="model.title">What I'm building now</h2>
+      <p data-i18n="model.text">
         I'm building a machine learning model that reads a dating conversation and
         catches <strong>red flags</strong> and <strong>green flags</strong> — and shows
         which messages led to each one, so the result can be checked rather than just trusted.
       </p>
       <ol class="steps">
-        <li class="active"><span>1</span><div><h3>Collect the dataset</h3><p>Anonymous real conversations shared through this page. <em>In progress — this is where you can help.</em></p></div></li>
-        <li><span>2</span><div><h3>Label red &amp; green flags</h3><p>Mark healthy and unhealthy behaviors in each conversation using clear, consistent guidelines.</p></div></li>
-        <li><span>3</span><div><h3>Train the model</h3><p>Train and fine-tune NLP / LLM-based classifiers to detect red and green flags in context.</p></div></li>
-        <li><span>4</span><div><h3>Evaluate &amp; explain</h3><p>Measure accuracy and bias, and make every prediction point to the evidence behind it.</p></div></li>
+        <li class="active"><span>1</span><div><h3 data-i18n="model.s1t">Collect the dataset</h3><p data-i18n="model.s1d">Anonymous real conversations shared through this page. <em>In progress — this is where you can help.</em></p></div></li>
+        <li><span>2</span><div><h3 data-i18n="model.s2t">Label red &amp; green flags</h3><p data-i18n="model.s2d">Mark healthy and unhealthy behaviors in each conversation using clear, consistent guidelines.</p></div></li>
+        <li><span>3</span><div><h3 data-i18n="model.s3t">Train the model</h3><p data-i18n="model.s3d">Train and fine-tune NLP / LLM-based classifiers to detect red and green flags in context.</p></div></li>
+        <li><span>4</span><div><h3 data-i18n="model.s4t">Evaluate &amp; explain</h3><p data-i18n="model.s4d">Measure accuracy and bias, and make every prediction point to the evidence behind it.</p></div></li>
       </ol>
-      <a class="button" href="#share">Share a conversation</a>
+      <a class="button" href="#share" data-i18n="cta.share">Share a conversation</a>
     </section>
 
     <section class="section" id="indicators">
-      <h2>Indicators</h2>
-      <p>
+      <h2 data-i18n="ind.title">Indicators</h2>
+      <p data-i18n="ind.text">
         These are the labels the model learns to recognize. When you share a conversation
         you can assign any of them — it helps turn raw text into training data.
       </p>
       <div class="legend">
-        <span class="lbl green">Green flag</span> healthy behavior
-        <span class="lbl potential">Potential red flag</span> worth a closer look; depends on context
-        <span class="lbl red">Red flag</span> unhealthy or harmful behavior
+        <span class="lbl green" data-i18n="lbl.green">Green flag</span> <span data-i18n="ind.greenDesc">healthy behavior</span>
+        <span class="lbl potential" data-i18n="lbl.potential">Potential red flag</span> <span data-i18n="ind.potentialDesc">worth a closer look; depends on context</span>
+        <span class="lbl red" data-i18n="lbl.red">Red flag</span> <span data-i18n="ind.redDesc">unhealthy or harmful behavior</span>
       </div>
       <div class="table-wrap">
         <table class="ind-table">
-          <thead><tr><th>Example trait</th><th>Label</th><th>What it can look like</th></tr></thead>
+          <thead><tr><th data-i18n="ind.colTrait">Example trait</th><th data-i18n="ind.colLabel">Label</th><th data-i18n="ind.colDesc">What it can look like</th></tr></thead>
           <tbody id="indicator-table"></tbody>
         </table>
       </div>
     </section>
 
     <section class="section" id="about">
-      <h2>What it is</h2>
-      <p>
+      <h2 data-i18n="about.title">What it is</h2>
+      <p data-i18n="about.p1">
         The platform uses Artificial Intelligence, Machine Learning and Natural Language
         Processing (NLP) to analyze dating conversations, identify potential green and
         red flags, and give meaningful insight into interpersonal communication.
       </p>
-      <p>
+      <p data-i18n="about.p2">
         It does not judge people or guess their intentions. It focuses on what can be
         observed: behaviors, communication patterns, consistency, emotional awareness
         and mutual respect.
@@ -142,65 +153,66 @@
     </section>
 
     <section class="section" id="features">
-      <h2>Core features</h2>
+      <h2 data-i18n="feat.title">Core features</h2>
       <div class="grid">
-        <article class="feature"><span class="ico">🚩</span><h3>Green &amp; red flag detection</h3><p>Identify potentially healthy and unhealthy relationship behaviors through contextual analysis.</p></article>
-        <article class="feature"><span class="ico">💬</span><h3>AI conversation analysis</h3><p>Understand communication styles, engagement, reciprocity and interaction patterns.</p></article>
-        <article class="feature"><span class="ico">🔁</span><h3>Behavioral pattern recognition</h3><p>Detect recurring patterns, inconsistencies, boundary violations and potential manipulation indicators.</p></article>
-        <article class="feature"><span class="ico">🌱</span><h3>Relationship insights</h3><p>Personalized insights that encourage self-awareness and healthier relationship decisions.</p></article>
-        <article class="feature"><span class="ico">🧭</span><h3>Context-aware analysis</h3><p>Consider conversational context and alternative interpretations rather than isolated messages.</p></article>
-        <article class="feature"><span class="ico">🔍</span><h3>Explainable AI</h3><p>Transparent assessments backed by specific evidence from the conversation, confidence levels and explanations.</p></article>
+        <article class="feature"><span class="ico">🚩</span><h3 data-i18n="feat.1t">Green &amp; red flag detection</h3><p data-i18n="feat.1d">Identify potentially healthy and unhealthy relationship behaviors through contextual analysis.</p></article>
+        <article class="feature"><span class="ico">💬</span><h3 data-i18n="feat.2t">AI conversation analysis</h3><p data-i18n="feat.2d">Understand communication styles, engagement, reciprocity and interaction patterns.</p></article>
+        <article class="feature"><span class="ico">🔁</span><h3 data-i18n="feat.3t">Behavioral pattern recognition</h3><p data-i18n="feat.3d">Detect recurring patterns, inconsistencies, boundary violations and potential manipulation indicators.</p></article>
+        <article class="feature"><span class="ico">🌱</span><h3 data-i18n="feat.4t">Relationship insights</h3><p data-i18n="feat.4d">Personalized insights that encourage self-awareness and healthier relationship decisions.</p></article>
+        <article class="feature"><span class="ico">🧭</span><h3 data-i18n="feat.5t">Context-aware analysis</h3><p data-i18n="feat.5d">Consider conversational context and alternative interpretations rather than isolated messages.</p></article>
+        <article class="feature"><span class="ico">🔍</span><h3 data-i18n="feat.6t">Explainable AI</h3><p data-i18n="feat.6d">Transparent assessments backed by specific evidence from the conversation, confidence levels and explanations.</p></article>
       </div>
     </section>
 
     <section class="section" id="research">
-      <h2>Technology &amp; research</h2>
-      <p>The project explores practical applications of modern AI:</p>
+      <h2 data-i18n="res.title">Technology &amp; research</h2>
+      <p data-i18n="res.text">The project explores practical applications of modern AI:</p>
       <ul class="tags">
-        <li>Large Language Models (LLMs)</li>
-        <li>Natural Language Processing</li>
-        <li>Machine Learning &amp; Deep Learning</li>
-        <li>Text Classification</li>
-        <li>Sentiment Analysis</li>
-        <li>Semantic Embeddings</li>
-        <li>Behavioral Pattern Recognition</li>
-        <li>Explainable AI (XAI)</li>
-        <li>Model Evaluation &amp; Bias Detection</li>
+        <li data-i18n="res.1">Large Language Models (LLMs)</li>
+        <li data-i18n="res.2">Natural Language Processing</li>
+        <li data-i18n="res.3">Machine Learning &amp; Deep Learning</li>
+        <li data-i18n="res.4">Text Classification</li>
+        <li data-i18n="res.5">Sentiment Analysis</li>
+        <li data-i18n="res.6">Semantic Embeddings</li>
+        <li data-i18n="res.7">Behavioral Pattern Recognition</li>
+        <li data-i18n="res.8">Explainable AI (XAI)</li>
+        <li data-i18n="res.9">Model Evaluation &amp; Bias Detection</li>
       </ul>
     </section>
 
     <section class="section vision" id="vision">
-      <h2>Vision</h2>
-      <p class="big">
+      <h2 data-i18n="vis.title">Vision</h2>
+      <p class="big" data-i18n="vis.big">
         To make AI a tool for better human understanding, emotional awareness
         and healthier relationships.
       </p>
-      <p>
+      <p data-i18n="vis.text">
         Technology should help people recognize patterns, ask better questions and make
         more informed decisions — not make personal decisions for them.
       </p>
-      <p class="motto">Understand communication. Recognize patterns. Build healthier relationships.</p>
-      <a class="button" href="#share">Share a conversation</a>
+      <p class="motto" data-i18n="vis.motto">Understand communication. Recognize patterns. Build healthier relationships.</p>
+      <a class="button" href="#share" data-i18n="cta.share">Share a conversation</a>
     </section>
 
     <section class="section" id="privacy">
-      <h2>Privacy &amp; data use</h2>
+      <h2 data-i18n="priv.title">Privacy &amp; data use</h2>
       <ul class="plain">
-        <li><strong>Anonymous.</strong> No account and no name required. Please remove names, usernames, phone numbers, addresses, workplaces and anything else that could identify someone — including the other person.</li>
-        <li><strong>Purpose.</strong> Submissions are used only to research, train and evaluate models that detect healthy and unhealthy communication patterns.</li>
-        <li><strong>Open dataset.</strong> After review and further anonymization, submissions may be published as part of an open research dataset.</li>
-        <li><strong>Storage.</strong> The form is processed by <a href="https://formspree.io/legal/privacy-policy" rel="noopener">Formspree</a>. This site has no tracking or analytics.</li>
-        <li><strong>Removal.</strong> If you want something you submitted removed, open an issue on our GitHub with a short quote so we can find it.</li>
-        <li><strong>Not advice.</strong> This project is research, not therapy or legal advice. If you feel unsafe in a relationship, contact local emergency services or a domestic-abuse helpline.</li>
+        <li data-i18n="priv.1"><strong>Anonymous.</strong> No account and no name required. Please remove names, usernames, phone numbers, addresses, workplaces and anything else that could identify someone — including the other person.</li>
+        <li data-i18n="priv.2"><strong>Purpose.</strong> Submissions are used only to research, train and evaluate models that detect healthy and unhealthy communication patterns.</li>
+        <li data-i18n="priv.3"><strong>Open dataset.</strong> After review and further anonymization, submissions may be published as part of an open research dataset.</li>
+        <li data-i18n="priv.4"><strong>Storage.</strong> The form is processed by <a href="https://formspree.io/legal/privacy-policy" rel="noopener">Formspree</a>. This site has no tracking or analytics.</li>
+        <li data-i18n="priv.5"><strong>Removal.</strong> If you want something you submitted removed, open an issue on our GitHub with a short quote so we can find it.</li>
+        <li data-i18n="priv.6"><strong>Not advice.</strong> This project is research, not therapy or legal advice. If you feel unsafe in a relationship, contact local emergency services or a domestic-abuse helpline.</li>
       </ul>
     </section>
   </main>
 
   <footer class="footer">
-    <p>AI Dating Intelligence — an open-source initiative by
+    <p data-i18n="footer">AI Dating Intelligence — an open-source initiative by
       <a href="https://github.com/Healthy-Relationship-Indicators" rel="noopener">Healthy Relationship Indicators</a>.</p>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

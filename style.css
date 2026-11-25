@@ -146,7 +146,7 @@ h1, h2, h3 { line-height: 1.15; margin: 0 0 0.6em; }
 /* assign indicators in the card */
 .assign { background: #f3f0fa; border-radius: 16px; padding: 0.7rem 0.9rem; }
 .assign summary { cursor: pointer; font-weight: 700; font-size: 0.92rem; }
-.assign summary span { font-weight: 400; color: #6b6385; }
+.assign summary span:not(.assign-title) { font-weight: 400; color: #6b6385; }
 .assign summary b { float: right; color: #be185d; font-size: 0.82rem; }
 .assign-hint { margin: 0.5rem 0; font-size: 0.82rem; color: #6b6385; }
 #indicator-picker { max-height: 280px; overflow-y: auto; display: grid; gap: 0.6rem; }
@@ -171,3 +171,9 @@ h1, h2, h3 { line-height: 1.15; margin: 0 0 0.6em; }
 .ind-table td:first-child { font-weight: 600; white-space: nowrap; }
 .ind-table td:last-child { color: var(--muted); }
 .ind-table tr:last-child td { border-bottom: none; }
+
+/* language switcher */
+.lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+.lang-switch button { background: none; border: none; color: var(--muted); font: inherit; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.6rem; cursor: pointer; }
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button[aria-pressed="true"] { background: rgba(255, 255, 255, 0.12); color: var(--text); }
