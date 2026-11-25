@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Dating Intelligence — Healthy Relationship Indicators</title>
+  <meta name="description" content="Building AI for healthier human connections. Help us build an open dataset of dating conversations — share one anonymously.">
+  <meta property="og:title" content="AI Dating Intelligence">
+  <meta property="og:description" content="Share a dating conversation anonymously and help build AI for healthier relationships.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💬</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <a class="brand" href="#">AI Dating Intelligence</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#research">Research</a>
+      <a href="#vision">Vision</a>
+      <a class="nav-cta" href="#share">Share data</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero + ngl-style submission card -->
+    <section class="hero" id="share">
+      <div class="hero-copy">
+        <p class="eyebrow">Open-source initiative · Healthy Relationship Indicators</p>
+        <h1>Building AI for healthier human connections.</h1>
+        <p class="lead">
+          AI Dating Intelligence helps people understand dating dynamics,
+          communication patterns and relationship behaviors — by spotting
+          green and red flags in conversations, with clear explanations.
+        </p>
+        <div class="notice">
+          <strong>Right now we're collecting data.</strong>
+          Before any model can be trained or evaluated, we need real examples.
+          If you have a dating conversation — healthy, awkward or worrying —
+          please share it anonymously. Every example helps.
+        </div>
+      </div>
+
+      <div class="card-wrap">
+        <form class="card" id="share-form" novalidate>
+          <div class="card-head">
+            <div class="avatar" aria-hidden="true">💬</div>
+            <div>
+              <p class="card-handle">@healthy-relationship-indicators</p>
+              <p class="card-title">share a dating conversation anonymously!</p>
+            </div>
+          </div>
+
+          <label class="sr-only" for="conversation">Conversation</label>
+          <textarea id="conversation" name="conversation" rows="8" maxlength="20000" required
+            placeholder="Paste the conversation here…&#10;&#10;A: hey, how was your day?&#10;B: good! you?&#10;…"></textarea>
+
+          <fieldset class="chips">
+            <legend>How did it feel to you?</legend>
+            <label><input type="radio" name="feeling" value="green"> 🟢 Healthy</label>
+            <label><input type="radio" name="feeling" value="red"> 🔴 Worrying</label>
+            <label><input type="radio" name="feeling" value="mixed"> 🟡 Mixed</label>
+            <label><input type="radio" name="feeling" value="unsure" checked> ⚪ Not sure</label>
+          </fieldset>
+
+          <label class="sr-only" for="context">Context (optional)</label>
+          <input id="context" name="context" type="text" maxlength="1000"
+            placeholder="Optional: context, e.g. 'first week of chatting on an app'">
+
+          <label class="consent">
+            <input type="checkbox" name="consent" value="yes" required>
+            <span>I removed names, phone numbers, addresses and other identifying details,
+            and I agree this text may be used for research and an open dataset.
+            <a href="#privacy">Privacy</a></span>
+          </label>
+
+          <!-- honeypot against bots -->
+          <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off">
+
+          <button type="submit" class="send">Send!</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="anon">🔒 anonymous · no account needed</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>What it is</h2>
+      <p>
+        The platform uses Artificial Intelligence, Machine Learning and Natural Language
+        Processing (NLP) to analyze dating conversations, identify potential green and
+        red flags, and give meaningful insight into interpersonal communication.
+      </p>
+      <p>
+        It does not judge people or guess their intentions. It focuses on what can be
+        observed: behaviors, communication patterns, consistency, emotional awareness
+        and mutual respect.
+      </p>
+    </section>
+
+    <section class="section" id="features">
+      <h2>Core features</h2>
+      <div class="grid">
+        <article class="feature"><span class="ico">🚩</span><h3>Green &amp; red flag detection</h3><p>Identify potentially healthy and unhealthy relationship behaviors through contextual analysis.</p></article>
+        <article class="feature"><span class="ico">💬</span><h3>AI conversation analysis</h3><p>Understand communication styles, engagement, reciprocity and interaction patterns.</p></article>
+        <article class="feature"><span class="ico">🔁</span><h3>Behavioral pattern recognition</h3><p>Detect recurring patterns, inconsistencies, boundary violations and potential manipulation indicators.</p></article>
+        <article class="feature"><span class="ico">🌱</span><h3>Relationship insights</h3><p>Personalized insights that encourage self-awareness and healthier relationship decisions.</p></article>
+        <article class="feature"><span class="ico">🧭</span><h3>Context-aware analysis</h3><p>Consider conversational context and alternative interpretations rather than isolated messages.</p></article>
+        <article class="feature"><span class="ico">🔍</span><h3>Explainable AI</h3><p>Transparent assessments backed by specific evidence from the conversation, confidence levels and explanations.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <h2>Technology &amp; research</h2>
+      <p>The project explores practical applications of modern AI:</p>
+      <ul class="tags">
+        <li>Large Language Models (LLMs)</li>
+        <li>Natural Language Processing</li>
+        <li>Machine Learning &amp; Deep Learning</li>
+        <li>Text Classification</li>
+        <li>Sentiment Analysis</li>
+        <li>Semantic Embeddings</li>
+        <li>Behavioral Pattern Recognition</li>
+        <li>Explainable AI (XAI)</li>
+        <li>Model Evaluation &amp; Bias Detection</li>
+      </ul>
+    </section>
+
+    <section class="section vision" id="vision">
+      <h2>Vision</h2>
+      <p class="big">
+        To make AI a tool for better human understanding, emotional awareness
+        and healthier relationships.
+      </p>
+      <p>
+        Technology should help people recognize patterns, ask better questions and make
+        more informed decisions — not make personal decisions for them.
+      </p>
+      <p class="motto">Understand communication. Recognize patterns. Build healthier relationships.</p>
+      <a class="button" href="#share">Share a conversation</a>
+    </section>
+
+    <section class="section" id="privacy">
+      <h2>Privacy &amp; data use</h2>
+      <ul class="plain">
+        <li><strong>Anonymous.</strong> No account and no name required. Please remove names, usernames, phone numbers, addresses, workplaces and anything else that could identify someone — including the other person.</li>
+        <li><strong>Purpose.</strong> Submissions are used only to research, train and evaluate models that detect healthy and unhealthy communication patterns.</li>
+        <li><strong>Open dataset.</strong> After review and further anonymization, submissions may be published as part of an open research dataset.</li>
+        <li><strong>Storage.</strong> The form is processed by <a href="https://formspree.io/legal/privacy-policy" rel="noopener">Formspree</a>. This site has no tracking or analytics.</li>
+        <li><strong>Removal.</strong> If you want something you submitted removed, open an issue on our GitHub with a short quote so we can find it.</li>
+        <li><strong>Not advice.</strong> This project is research, not therapy or legal advice. If you feel unsafe in a relationship, contact local emergency services or a domestic-abuse helpline.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>AI Dating Intelligence — an open-source initiative by
+      <a href="https://github.com/Healthy-Relationship-Indicators" rel="noopener">Healthy Relationship Indicators</a>.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
